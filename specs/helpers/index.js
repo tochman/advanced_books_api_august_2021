@@ -41,10 +41,11 @@ const pending = () => {
   console.warn('Pending - waiting for you to write a test case...')
 }
 
+global.expect = expect;
+global.factory = factory;
+global.Models = Models
+global.serverConfig = serverConfig
+
 module.exports = {
-  expect,
-  factory,
-  Models,
-  serverConfig,
   pending
 }

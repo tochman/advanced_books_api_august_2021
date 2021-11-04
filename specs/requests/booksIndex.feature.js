@@ -1,4 +1,3 @@
-const { factory, expect, serverConfig } = require("../helpers");
 
 let request, response;
 
@@ -20,7 +19,6 @@ describe("GET /api/books", () => {
   });
 
   it("is expected to respond with status 200", () => {
-    debugger
     expect(response.status).to.equal(200);
   });
 
