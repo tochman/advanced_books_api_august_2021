@@ -24,15 +24,14 @@ describe("Book", () => {
       });
     });
 
-    // describe('is expected to have associations', () => {
-    //   it('<AssociatedModel>:<AssociationType>', () => {
-    //     // expect(associations)
-    //     //   .to.have.own.property('<model_alias_or_name>')
-    //     //   .to.be.instanceOf(Association.<AssociationType>)
-    //     //   .that.has.property('foreignKey', '<field>')
-    //     pending();
-    //   });
-    // });
+    describe('associations', () => {
+      it('is expected to belong to author', () => {
+        expect(associations)
+          .to.have.own.property('author')
+          .to.be.instanceOf(Association.BelongsTo)
+          .that.has.property('foreignKey', 'AuthorId')
+      });
+    });
   });
 
   describe("Instance", () => {
